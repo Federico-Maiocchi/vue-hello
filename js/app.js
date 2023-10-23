@@ -15,13 +15,51 @@ createApp ({
             image: './img/Vue.jpeg',
 
             // proprietà input
-            message: 'Yessss man'
+            message: 'Yessss man',
+
+            gallery: [
+                    'https://picsum.photos/seed/picsum/200/300',
+                    'https://picsum.photos/200/300?grayscale',
+                    'https://picsum.photos/200/300/?blur'
+            ],
+
+            paragraph: [
+                'immagine a caso 1',
+                'immagine a caso caso 2',
+                'immagine a caso caso del caso 3'
+            ],
+
+            bgParagraph: [
+                'bg-red',
+                'bg-blue',
+                'bg-green'
+
+            ],
+
+            items: [
+                {
+                    image: 'https://picsum.photos/seed/picsum/200/300',
+                    paragraph: 'immagine a caso 1',
+                    bgParagraph: 'bg-red'
+                },
+                {
+                    image: 'https://picsum.photos/200/300?grayscale',
+                    paragraph: 'immagine a caso caso 2',
+                    bgParagraph: 'bg-blue'
+                },
+                {
+                    image: 'https://picsum.photos/200/300/?blur',
+                    paragraph: 'immagine a caso caso del caso 3',
+                    bgParagraph: 'bg-green'
+                }
+            ]
         }
     },
 
     methods: {
 
-        
+            
+
 
     }
 

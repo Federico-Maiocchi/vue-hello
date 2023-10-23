@@ -5,37 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello Veu</title>
     <!-- importiamo VUEjs usando questo link della cdn -->
+    
     <script src="https://unpkg.com/vue@3"></script>
+    <link rel="stylesheet" href="./css/app.css">
 
 </head>
 <body>
 
     <!-- Definiamo l'elemento HTML dentro il quale Vue verrà utilizzato -->
     <div id="app">
-        <!-- TITOLO O MESSAGGIO -->
-
-        <!-- cioè H1 {{title}}-->
-        <h1>{{title}}</h1>
-
+         <!-- TITOLO O MESSAGGIO -->
+        <section>
+            <!-- cioè H1 {{title}}-->
+            <h1 class="title-set">{{title}}</h1>
+        </section>
+    
         
         <!-- direttive -->
 
         <!-- IMMAGINE -->
+        <section>
+            <!-- V-BIND: -->
 
-        <!-- V-BIND: -->
+            <!-- per stampare l'immagine (oggetto) bisogna mettere la direttiva v-bind: -->
+            <img v-bind:src="image" alt="Veu">
+            <!-- oppure si può scrivere in forma abbreviata -->
+            <!-- <img :src="Image" alt="Veu"> -->
+        </section>
 
-        <!-- per stampare l'immagine (oggetto) bisogna mettere la direttiva v-bind: -->
-        <img v-bind:src="image" alt="Veu">
-        <!-- oppure si può scrivere in forma abbreviata -->
-        <!-- <img :src="Image" alt="Veu"> -->
+        <section class="flex">
+            <div>
+                <img v-bind:src="gallery[0]" alt="Veu">
+                <p :class="bgParagraph[0]">{{paragraph[0]}}</p>
+            </div>
+            <div>
+                <img v-bind:src="gallery[1]" alt="Veu">
+                <p :class="bgParagraph[1]">{{paragraph[1]}}</p>
+            </div>
+            <div>
+                <img v-bind:src="gallery[2]" alt="Veu">
+                <p :class="bgParagraph[2]">{{paragraph[2]}}</p>
+            </div>
+            
+        </section>
 
+        <section class="flex">
+            <div v-for="(item, index) in items">
+                <img :src="item.image">
+                <p :class="item.bgParagraph">{{ item.paragraph }}</p>
+            </div>
+        </section>
+
+        
         <!-- V-MODEL: -->
-
-        <!-- per prendere un elmento dal js e stamparlo nell'input bisogna mettere la direttiva V-MODEL: -->
+        <section>
+            <!-- per prendere un elmento dal js e stamparlo nell'input bisogna mettere la direttiva V-MODEL: -->
         <input v-model="message">
+        </section>
+        
+        
 
-        <button></button>
-
+        <!-- EVENTI -->
+        <section>
+            <!-- esempio di evento di click @click-->
+            <button >Premi</button>
+        </section>
 
     </div>
 
