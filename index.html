@@ -4,11 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello Veu</title>
+    <!-- importiamo VUEjs usando questo link della cdn -->
     <script src="https://unpkg.com/vue@3"></script>
 </head>
 <body>
-    
 
+    <!-- Definiamo l'elemento HTML dentro il quale Vue verrà utilizzato -->
+    <div id="app">
+        <!-- cioè H1 {{title}}-->
+        <h1>{{title}}</h1>
+    </div>
+
+    <!-- il nostro link js sarà posizionato sempre dopo al link di Vue -->
     <script src="./js/app.js"></script>
 </body>
 </html>
