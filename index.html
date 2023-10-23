@@ -11,9 +11,17 @@
 
     <!-- Definiamo l'elemento HTML dentro il quale Vue verrà utilizzato -->
     <div id="app">
+        <!-- TITOLO O MESSAGGIO -->
+
         <!-- cioè H1 {{title}}-->
         <h1>{{title}}</h1>
+
+        <!-- IMMAGINE -->
+        
+        <!-- per stampare l'immagine (oggetto) bisogna mettere l'attributo v-bind: -->
         <img v-bind:src="Image" alt="Veu">
+        <!-- oppure si può scrivere in forma abbreviata -->
+        <!-- <img :src="Image" alt="Veu"> -->
     </div>
 
     <!-- il nostro link js sarà posizionato sempre dopo al link di Vue -->
