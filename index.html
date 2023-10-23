@@ -6,6 +6,7 @@
     <title>Hello Veu</title>
     <!-- importiamo VUEjs usando questo link della cdn -->
     <script src="https://unpkg.com/vue@3"></script>
+
 </head>
 <body>
 
@@ -16,12 +17,26 @@
         <!-- cioè H1 {{title}}-->
         <h1>{{title}}</h1>
 
-        <!-- IMMAGINE -->
         
-        <!-- per stampare l'immagine (oggetto) bisogna mettere l'attributo v-bind: -->
-        <img v-bind:src="Image" alt="Veu">
+        <!-- direttive -->
+
+        <!-- IMMAGINE -->
+
+        <!-- V-BIND: -->
+
+        <!-- per stampare l'immagine (oggetto) bisogna mettere la direttiva v-bind: -->
+        <img v-bind:src="image" alt="Veu">
         <!-- oppure si può scrivere in forma abbreviata -->
         <!-- <img :src="Image" alt="Veu"> -->
+
+        <!-- V-MODEL: -->
+
+        <!-- per prendere un elmento dal js e stamparlo nell'input bisogna mettere la direttiva V-MODEL: -->
+        <input v-model="message">
+
+        <button></button>
+
+
     </div>
 
     <!-- il nostro link js sarà posizionato sempre dopo al link di Vue -->
