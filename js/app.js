@@ -7,7 +7,9 @@ const { createApp } = Vue;
 createApp ({
     data() {
         return {
-            title: 'Hello Vue!'
+            title: 'Hello Vue!',
+            
+            Image: './img/Vue.jpeg'
         }
     }
 // invochiamo il metodo .mount( pre connettere l'istanza al tag HTML con id #app e renderizzare l'app
